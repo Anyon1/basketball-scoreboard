@@ -6,30 +6,14 @@ homeScoreEl.textContent = homeScore
 awayScoreEl.textContent = awayScore
 let lastScores = document.getElementById("last-scores")
 
-
-function home1() {
-     homeScore += 1
-     homeScoreEl.textContent = homeScore
-}
-function home2() {
-    homeScore += 2
-    homeScoreEl.textContent = homeScore
-}
-function home3() {
-    homeScore += 3
-    homeScoreEl.textContent = homeScore
-}
-function away1() {
-    awayScore += 1
-    awayScoreEl.textContent = awayScore
-}
-function away2() {
-    awayScore += 2
-    awayScoreEl.textContent = awayScore
-}
-function away3() {
-    awayScore += 3
-    awayScoreEl.textContent = awayScore
+function increment(score, team) {
+    if (team === "home") {
+        homeScore += score
+        homeScoreEl.textContent = homeScore
+    } else {
+        awayScore += score
+        awayScoreEl.textContent = awayScore
+    }
 }
 function newGame() {
     lastScores.innerHTML += homeScore + " : " + awayScore + "<br>"
